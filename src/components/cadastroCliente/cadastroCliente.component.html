@@ -1,0 +1,17 @@
+<section class="cadastro-cliente">
+      <h2><span class="badge badge-dark">Cadastro cliente</span></h2>
+
+      <div class="card" style="width: 50rem;">
+          <div class="card-body">
+
+                <ComponentMensagem :mensagemSucesso="mensagemSucesso" :success="sucesso" :mensagensErros="mensagensErros" :error="error"></ComponentMensagem>
+
+                  <form>
+                        <ComponentFormCliente :cliente="cliente"></ComponentFormCliente>
+
+                        <button type="submit" class="btn btn-primary" @click="salvarCliente()">Salvar</button>
+                        <router-link  href="#" to="/Cliente" class="btn btn-secondary">Voltar</router-link>
+                  </form>
+              </div>
+        </div>
+</section>

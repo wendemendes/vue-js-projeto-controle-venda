@@ -1,0 +1,11 @@
+
+
+<section class="mensagem">
+
+   <div v-show="success"  class="alert alert-success" role="alert">{{mensagemSucesso}}</div>
+
+  <div v-show="error" class="alert alert-danger" role="alert">
+          <ul v-for="erro in mensagensErros">{{erro}}</ul>
+  </div>
+
+</section>

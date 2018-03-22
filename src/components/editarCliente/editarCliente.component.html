@@ -1,0 +1,20 @@
+
+<section class="editar-cliente">
+
+      <h2><span class="badge badge-dark">Editar cliente</span></h2>
+
+      <div class="card" style="width: 50rem;">
+          <div class="card-body">
+
+                <ComponentMensagem :mensagemSucesso="mensagemSucesso" :success="sucesso" :mensagensErros="mensagensErros" :error="error"></ComponentMensagem>
+
+                  <form>
+                        <ComponentFormCliente :cliente="cliente"></ComponentFormCliente>
+
+                        <button type="submit" class="btn btn-primary" @click="editarCliente()">Salvar</button>
+                        <button type="submit" class="btn btn-secondary" @click="voltar()">Voltar</button>
+                  </form>
+              </div>
+        </div>
+
+</section>

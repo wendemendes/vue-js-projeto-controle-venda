@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Aula 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <script src="https://unpkg.com/vue"></script>
+
+    <div id="app">
+
+      <div>
+
+        <component :is="mostrarComponente"></component>
+        <br><br>
+
+          <h2 ref="ref_title">{{titulo}}</h2>
+        <ul ref="ref_users" class="list-group">
+          <li class="list-group-item" v-for="(user, index) in users" :key="user.name">{{user.name}}  <button @click.stop.prevent="remove(index)" type="button" class="btn btn-danger btn-sm">Deletar</button></li>
+        </ul>
+
+      </div>
+    </div>
+
+    <template id="linguagens">
+        <div>
+            <h2>{{titulo}}</h2>
+
+            <ul class="list-group">
+              <li class="list-group-item" v-for="(linguagem, index) in linguagens" :key="linguagem.name">{{linguagem.name}}</li>
+            </ul>
+        <div>
+    </template>
+
+    <template id="comidas">
+        <div>
+            <h2>{{titulo}}</h2>
+
+            <ul class="list-group">
+              <li class="list-group-item" v-for="(comida, index) in comidas" :key="comida.name">{{comida.name}}</li>
+            </ul>
+        <div>
+    </template>
+
+<script>
+
+  Vue.component('componente-linguagens', {
+    template: "#linguagens",
+        data(){
+          return {
+            titulo: 'Linguagens',
+            linguagens: [
+               {name: 'Scala'},
+                {name: 'Ruby'},
+                 {name: 'Java'}
+               ]
+          }
+        },
+  });
+
+  Vue.component('componente-comida', {
+    template: "#comidas",
+        data(){
+          return {
+            titulo: 'Comidas',
+            comidas: [
+               {name: 'Arroz'},
+                {name: 'Feijão'},
+                 {name: 'Batata'}
+               ]
+          }
+        },
+  });
+
+      var app = new Vue({
+          el: "#app",
+
+          mounted() {
+            console.log(this.$refs.ref_users);
+
+          },
+
+          data: {
+            titulo: "Nomes",
+            users: [
+              {name: 'Joao'},
+              {name: 'maria'},
+              {name: 'Vasco'},
+            ],
+
+            mostrarComponente: 'componente-comida'
+          },
+
+          methods: {
+            remove(index) {
+                this.users.splice(index,1);
+            }
+          }
+
+
+
+       });
+
+</script>
+
+
+
+  </body>
+</html>

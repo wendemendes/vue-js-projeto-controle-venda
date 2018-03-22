@@ -1,0 +1,34 @@
+
+<section class="cliente">
+  <br/>
+
+        <ComponentMensagem :mensagemSucesso="mensagemSucesso" :success="sucesso"></ComponentMensagem>
+
+        <div class="container">
+            <div class="row">
+                  <div class="col-sm">
+                    <input type="text" class="form-control" id="id-nome" placeholder="Informe o nome do cliente">
+                  </div>
+
+                  <div class="col-sm">
+                      <button type="submit" class="btn btn-primary" @click="buscarCliente()">Buscar</button>
+                      <button type="submit" class="btn btn-secondary" @click="novoCliente()">Novo</button>
+                  </div>
+
+            </div>
+            <br/>
+
+            <ul class="list-group">
+
+                <div v-for="(cliente, index) in clientes" :key="cliente.clienteKey" class="row">
+                  <div class="col list-group-item">{{cliente.clienteKey}}</div>
+                  <div class="col list-group-item">{{cliente.nome}}</div>
+                  <div class="col list-group-item">
+                      <button type="button" class="btn btn-secondary" @click="editarCliente(cliente.clienteKey)">Editar</button>
+                      <button type="button" class="btn btn-danger" @click="excluirCliente(cliente.clienteKey, index)">Excluir</button>
+                  </div>
+                </div>
+             </ul>
+    </div>
+
+</section>
