@@ -29,12 +29,11 @@ export default {
 
         salvarCliente() {
 
-              var url = Path.path + 'clientes';
-              var vm = this;
+            var vm = this;
 
-             return axios({
+             return HTTP({
                  method: 'post',
-                 url: url,
+                 url: 'clientes',
                  data: this.cliente,
                 headers: {'Content-Type': 'application/json'}
              }).then(response => {

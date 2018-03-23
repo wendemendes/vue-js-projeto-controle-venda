@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Menu from '@/components/menu'
 import Home from '@/components/home'
 import PaginaNaoEncontrada from '@/components/paginaNaoEncontrada'
 import Cliente from '@/components/cliente'

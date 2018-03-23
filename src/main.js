@@ -5,13 +5,13 @@ import router from './router'
 import jQuery from 'jquery'
 import axios from 'axios'
 
+import {HTTP} from './util/http-common.js'
 import {RetornadorMensagem} from '../static/retornadorMensagem.js'
-import {Path} from '../static/path.js'
 
 global.jQuery = jQuery
 global.axios = axios
 global.RetornadorMensagem = RetornadorMensagem
-global.Path = Path
+global.HTTP = HTTP
 
 let Bootstrap = require('bootstrap')
 import 'bootstrap/dist/css/bootstrap.css'

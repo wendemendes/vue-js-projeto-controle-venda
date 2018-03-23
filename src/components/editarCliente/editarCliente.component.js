@@ -35,10 +35,10 @@ export default {
               this.clienteKey = this.$route.params.clienteKey;
 
               if(this.clienteKey > 0){
-                    var url = Path.path + 'clientes/' + this.clienteKey;
+                    var url =  'clientes/' + this.clienteKey;
                     var vm = this;
 
-                      axios.get(url)
+                      HTTP.get(url)
                         .then(function(response) {
                             vm.cliente = response.data;
                         }).catch(function (error) {
@@ -49,10 +49,10 @@ export default {
 
         editarCliente() {
 
-                    var url = Path.path + 'clientes/' + this.clienteKey;
+                    var url =  'clientes/' + this.clienteKey;
                     var vm = this;
 
-                   return axios({
+                   return HTTP({
                        method: 'put',
                        url: url,
                        data: this.cliente,

@@ -27,10 +27,9 @@ export default {
   methods: {
           buscarCliente() {
 
-                var url = Path.path + 'clientes';
                 var vm = this;
 
-                  axios.get(url)
+                  HTTP.get('clientes')
                     .then(function(response) {
                         vm.clientes = response.data;
                     }).catch(function (error) {
@@ -39,17 +38,14 @@ export default {
           },
 
           editarCliente(clienteKey) {
-
-                    this.$router.push({ name: 'EditarCliente', params: { clienteKey : clienteKey } });
+              this.$router.push({ name: 'EditarCliente', params: { clienteKey : clienteKey } });
           },
 
           excluirCliente(clienteKey, index) {
 
-
-                var url = Path.path + 'clientes/' + clienteKey;
                 var vm = this;
 
-                  axios.delete(url)
+                  HTTP.delete('clientes/' + clienteKey)
                     .then(function(response) {
 
                       vm.mensagemSucesso = 'Operação realizada com sucesso';
