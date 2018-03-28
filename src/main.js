@@ -6,7 +6,7 @@ import jQuery from 'jquery'
 import axios from 'axios'
 
 import {HTTP} from './util/http-common.js'
-import {RetornadorMensagem} from '../static/retornadorMensagem.js'
+import {RetornadorMensagem} from './util/retornadorMensagem.js'
 
 global.jQuery = jQuery
 global.axios = axios
