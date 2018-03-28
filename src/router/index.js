@@ -3,11 +3,13 @@ import Router from 'vue-router'
 import Home from '@/components/home'
 import PaginaNaoEncontrada from '@/components/paginaNaoEncontrada'
 import Cliente from '@/components/cliente'
-import Produto from '@/components/produto'
 import LancamentoPedido from '@/components/lancamentoPedido'
 import RelatorioCliente from '@/components/relatorioCliente'
 import CadastroCliente from '@/components/cadastroCliente'
 import EditarCliente from '@/components/editarCliente'
+import Produto from '@/components/produto'
+import CadastroProduto from '@/components/cadastroProduto'
+import EditarProduto from '@/components/editarProduto'
 
 Vue.use(Router)
 
@@ -40,6 +42,17 @@ export default new Router({
       path: '/Produto',
       name: 'Produto',
       component: Produto
+    },
+    {
+      path: '/CadastroProduto',
+      name: 'CadastroProduto',
+      component: CadastroProduto
+    },
+    {
+      path: '/EditarProduto',
+      name: 'EditarProduto',
+      component: EditarProduto,
+      produtoKey: ''
     },
     {
       path: '/LancamentoPedido',
