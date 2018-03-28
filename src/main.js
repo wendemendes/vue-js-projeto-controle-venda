@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import ComponentMensagem from './components/mensagem/index.vue'
+import Menu from '@/components/menu'
 import router from './router'
 import jQuery from 'jquery'
 import axios from 'axios'
@@ -16,7 +17,7 @@ global.HTTP = HTTP
 let Bootstrap = require('bootstrap')
 import 'bootstrap/dist/css/bootstrap.css'
 Vue.component('ComponentMensagem', ComponentMensagem)
-
+Vue.component('Menu', Menu)
 
 
 Vue.config.productionTip = false
