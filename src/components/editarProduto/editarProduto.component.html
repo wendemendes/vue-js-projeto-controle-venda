@@ -1,0 +1,23 @@
+
+<section class="editar-produto">
+
+      <div class="card" style="width: 50rem;">
+
+        <div class="badge badge-light" role="alert">
+          <h4>Editar produto</h4>
+        </div>
+
+          <div class="card-body">
+
+                <ComponentMensagem :mensagemSucesso="mensagemSucesso" :success="sucesso" :mensagensErros="mensagensErros" :error="error"></ComponentMensagem>
+
+                  <form>
+                        <ComponentFormProduto :produto="produto"></ComponentFormProduto>
+
+                        <button type="submit" class="btn btn-primary" @click="editarProduto()">Salvar</button>
+                        <button type="submit" class="btn btn-secondary" @click="voltar()">Voltar</button>
+                  </form>
+              </div>
+        </div>
+
+</section>

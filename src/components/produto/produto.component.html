@@ -1,5 +1,36 @@
 
 <section class="produto">
-  <h1>produto Component</h1>
-</section>
 
+  <br/>
+      <div class="card-body">
+
+                <ComponentMensagem :mensagemSucesso="mensagemSucesso" :success="sucesso"></ComponentMensagem>
+
+                  <div class="row">
+                        <div class="col-sm">
+                          <input type="text" class="form-control" id="id-descricao-produto" placeholder="Informe a descricao do produto">
+                        </div>
+
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-primary" @click="buscarProduto()">Buscar</button>
+                            <button type="submit" class="btn btn-secondary" @click="novoProduto()">Novo</button>
+                        </div>
+
+                  </div>
+                  <br/>
+
+                  <ul class="list-group">
+
+                      <div v-for="(produto, index) in produtos" :key="produto.produtoKey" class="row">
+                        <div class="col list-group-item">{{produto.produtoKey}}</div>
+                        <div class="col list-group-item">{{produto.descricao}}</div>
+                        <div class="col list-group-item">
+                            <button type="button" class="btn btn-secondary" @click="editarProduto(produto.produtoKey)">Editar</button>
+                            <button type="button" class="btn btn-danger" @click="excluirProduto(produto.produtoKey, index)">Excluir</button>
+                        </div>
+                      </div>
+                   </ul>
+          </div>
+
+
+</section>

@@ -1,0 +1,21 @@
+
+<section class="cadastro-produto">
+      <div class="card" style="width: 50rem;">
+
+        <div class="badge badge-light" role="alert">
+          <h4>Cadastro produto</h4>
+        </div>
+
+          <div class="card-body">
+
+                <ComponentMensagem :mensagemSucesso="mensagemSucesso" :success="sucesso" :mensagensErros="mensagensErros" :error="error"></ComponentMensagem>
+
+                  <form>
+                        <ComponentFormProduto :produto="produto"></ComponentFormProduto>
+
+                        <button type="submit" class="btn btn-primary" @click="salvarProduto()">Salvar</button>
+                        <router-link  href="#" to="/Produto" class="btn btn-secondary">Voltar</router-link>
+                  </form>
+              </div>
+        </div>
+</section>
