@@ -1,4 +1,4 @@
-import ComponentFormCliente from '@/components/formCliente'
+import ComponentFormCliente from '@/components/crud-cliente/formCliente'
 
 export default {
   name: 'editar-cliente',

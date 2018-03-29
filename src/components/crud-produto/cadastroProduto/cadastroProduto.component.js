@@ -1,5 +1,5 @@
 import ComponentMensagem from '@/components/mensagem'
-import ComponentFormProduto from '@/components/formProduto'
+import ComponentFormProduto from '@/components/crud-produto/formProduto'
 
 export default {
   name: 'cadastro-produto',

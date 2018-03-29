@@ -1,5 +1,5 @@
 import ComponentMensagem from '@/components/mensagem'
-import ComponentFormCliente from '@/components/formCliente'
+import ComponentFormCliente from '@/components/crud-cliente/formCliente'
 
 export default {
   name: 'cadastro-cliente',

@@ -1,13 +1,15 @@
 export default {
   name: 'form-produto',
   components: {},
-  props: [],
+  props: {
+    produto: {
+        descricao: '',
+        gtin: '',
+    },
+  },
   data () {
     return {
-          produto: {
-              descricao: '',
-              gtin: '',
-          },
+
     }
   },
   computed: {

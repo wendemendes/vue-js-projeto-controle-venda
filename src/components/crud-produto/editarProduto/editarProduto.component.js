@@ -1,4 +1,4 @@
-import ComponentFormProduto from '@/components/formProduto'
+import ComponentFormProduto from '@/components/crud-produto/formProduto'
 
 export default {
   name: 'editar-produto',
